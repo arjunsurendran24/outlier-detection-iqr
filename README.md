@@ -24,6 +24,6 @@ If the thresholds are already calculated and stored in file `outlier_detection_f
 `
 python .\outlier_detection_from_stored_threshold.py --data-folder .\Edited\ --low-threshold-file .\lower_threshold.txt --high-threshold-file .\higher_threshold.txt
 `
-Threshold files for `0.1 and 0.9` thresholds are available in `theshold_01_09` directory
-Threshold files for `0.25 and 0.75` thresholds are available in `theshold_025_075` directory
+Threshold files for `0.1 and 0.9` thresholds are available in `theshold_01_09` directory.
+Threshold files for `0.25 and 0.75` thresholds are available in `theshold_025_075` directory.
 
