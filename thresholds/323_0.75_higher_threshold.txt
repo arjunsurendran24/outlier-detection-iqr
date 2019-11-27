@@ -1,0 +1,8 @@
+Mean_Thickness(mm)	4.388119
+GM_Volume(mm^3)	13474.392536
+CSF_Volume(mm^3)	3932.1844485
+WM_Volume(mm^3)	6854.227731999999
+Total_Volume(GM+WM)(mm^3)	20287.902838
+Cortical_Area_mid(mm^2)	4082.62730125
+Cortical_Area_inner(mm^2)	3650.8016655
+Cortical_Area_pial(mm^2)	5076.54794175
