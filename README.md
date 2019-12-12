@@ -26,8 +26,8 @@ BrainSuite is a collaborative project by University of California, Los Angeles a
 
 # Algorithm
 
-Assuming dataset contains 2n entries
-First quartile, Q1 = median of n smallest entries in dataset
+Assuming dataset contains 2n entries  
+First quartile, Q1 = median of n smallest entries in dataset  
 Third Quartile, Q3 = median of n largest entries in dataset [3]
 
 # Usage
