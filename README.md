@@ -56,6 +56,12 @@ If the thresholds are already calculated and stored in file it will be read from
 6. Filter them out and write to an output file.
 7. In the process if thresholds are already available in txt files it will be loaded from file, else threshold files will be created that contains the threshold for further usage of script
 
+# Output
+
+For each ROI_ID there will be a text file which contains
+1. No Outliers! - If there are not outliers  
+2. The outlier datapoints for that ROI_ID which is outside the thresholds
+
 # References
 
 1. http://brainsuite.org/, BrainSuite, Last accessed 12/08/2019
