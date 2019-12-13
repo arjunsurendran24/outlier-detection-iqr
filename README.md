@@ -2,6 +2,8 @@
 
 IQR(Interquartile Range) is a concept from descriptive statistics. It measures the statistical dispersion, by being the difference between 75th and 25th quartiles, or upper and lower quartiles. IQR can also be called as a measure of variability, based on dividing data into quartiles.[3]
 
+![IQR](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Boxplot_vs_PDF.svg/800px-Boxplot_vs_PDF.svg.png)
+
 # BrainSuite
 
 BrainSuite is a collaborative project by University of California, Los Angeles and University of Southern California for automated processing of Magnetic Resonance Images of the human brain. It provides several tools for visualization and interaction with data in addition  to functionalities for parameterization of inner and outer surfaces of cerebral cortex. [1]
