@@ -44,41 +44,49 @@ def find_outliers():
     low, high = thresholds
 
     ids = data['ROI_ID'].unique()
-    for id in ids:
-        
-        df = data[data['ROI_ID'] == id]
-        df.drop('ROI_ID', axis=1)
-        
-        low_file_name = "./thresholds/" + str(id) + "_" + str(low) + "_lower_threshold.txt"
-        high_file_name = "./thresholds/" + str(id) + "_" + str(high) +  "_higher_threshold.txt"
-        
-        try:
-            Q1 = read_threshold_from_file(low_file_name)
-            Q3 = read_threshold_from_file(high_file_name)
+    outfile = "./outliers/" + "report.txt"
 
-        except FileNotFoundError:
-            Q1 = df.quantile(low)
-            Q3 = df.quantile(high)
-            Q1.to_csv(low_file_name, sep="\t")
-            Q3.to_csv(high_file_name, sep="\t")
+    with open(outfile, "w") as of:
+        for id in ids:
+            
+            df = data[data['ROI_ID'] == id]
+            df.drop('ROI_ID', axis=1)
+            
+            low_file_name = "./thresholds/" + str(id) + "_" + str(low) + "_lower_threshold.txt"
+            high_file_name = "./thresholds/" + str(id) + "_" + str(high) +  "_higher_threshold.txt"
+            
+            try:
+                Q1 = read_threshold_from_file(low_file_name)
+                Q3 = read_threshold_from_file(high_file_name)
 
-        Out1 = data[df >= Q3]
-        Out2 = data[df <= Q1]
+            except FileNotFoundError:
+                Q1 = df.quantile(low)
+                Q3 = df.quantile(high)
+                Q1.to_csv(low_file_name, sep="\t")
+                Q3.to_csv(high_file_name, sep="\t")
 
-        Out1 = Out1.dropna('rows', how='any')
-        Out2 = Out2.dropna('rows', how='any')
-        
-        out_list = [Out1, Out2]
-        out = pd.concat(out_list)
-        
-        outfile = "./outliers/" + str(id) + ".txt"
+            Out1 = data[df >= Q3]
+            Out2 = data[df <= Q1]
 
-        if out.empty:
-            with open(outfile, "w") as outfile:
-                outfile.write("No Outliers!")
-        else:
-            print(id)
-            out.to_csv(outfile, sep="\t")
+            Out1 = Out1.dropna('rows', how='any')
+            Out2 = Out2.dropna('rows', how='any')
+            
+            out_list = [Out1, Out2]
+            out = pd.concat(out_list)
+            
+            outfile = "./outliers/" + str(id) + ".txt"
+
+            if out.empty:
+                pass
+            else:
+                print(id)
+                of.write(out.to_string())
+                of.write("\n")
+                of.write(Q1.to_string())
+                of.write("\n")
+                of.write(Q3.to_string())
+                of.write("\n")
+
 
 if __name__ == '__main__':
     find_outliers()
