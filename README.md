@@ -59,7 +59,7 @@ If the thresholds are already calculated and stored in file it will be read from
 # Output
 
 For each ROI_ID there will be a text file which contains
-1. No Outliers! - If there are not outliers  
+1. No Outliers! - If there are no outliers  
 2. The outlier datapoints for that ROI_ID which is outside the thresholds
 
 # References
