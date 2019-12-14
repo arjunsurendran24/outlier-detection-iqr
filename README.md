@@ -60,13 +60,15 @@ If the thresholds are already calculated and stored in file it will be read from
 
 # Output
 
-The output will be a text file with *.report.txt
+The output will be a text file with name in the format *.report.txt
 
 It contains
 1. Outlier ID
-2. Outlier Data corresponding to those ID
+2. Outlier Measure and its value
 3. Low threshold for ID
 4. High threshold for ID
+
+Example output is given in the folder `sample_output`  
 
 # References
 
