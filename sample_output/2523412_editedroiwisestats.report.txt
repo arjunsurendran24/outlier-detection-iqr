@@ -1,5 +1,7 @@
-    ROI_ID  Mean_Thickness(mm)  GM_Volume(mm^3)  CSF_Volume(mm^3)  WM_Volume(mm^3)  Total_Volume(GM+WM)(mm^3)  Cortical_Area_mid(mm^2)  Cortical_Area_inner(mm^2)  Cortical_Area_pial(mm^2)
-82   631.0                 0.0       214.621532               0.0       363.928486                 578.550019                      0.0                        0.0                       0.0
+ROI_ID :631
+    Mean_Thickness(mm)  GM_Volume(mm^3)  CSF_Volume(mm^3)  WM_Volume(mm^3)  Total_Volume(GM+WM)(mm^3)  Cortical_Area_mid(mm^2)  Cortical_Area_inner(mm^2)  Cortical_Area_pial(mm^2)
+82                 0.0       214.621532               0.0       363.928486                 578.550019                      0.0                        0.0                       0.0
+LOW THRESHOLD
 0
 ROI_ID                       631.000000
 Mean_Thickness(mm)             0.000000
@@ -10,6 +12,7 @@ Total_Volume(GM+WM)(mm^3)    578.550019
 Cortical_Area_mid(mm^2)        0.000000
 Cortical_Area_inner(mm^2)      0.000000
 Cortical_Area_pial(mm^2)       0.000000
+HIGH THRESHOLD
 0
 ROI_ID                       631.000000
 Mean_Thickness(mm)             0.000000
@@ -20,8 +23,10 @@ Total_Volume(GM+WM)(mm^3)    578.550019
 Cortical_Area_mid(mm^2)        0.000000
 Cortical_Area_inner(mm^2)      0.000000
 Cortical_Area_pial(mm^2)       0.000000
-    ROI_ID  Mean_Thickness(mm)  GM_Volume(mm^3)  CSF_Volume(mm^3)  WM_Volume(mm^3)  Total_Volume(GM+WM)(mm^3)  Cortical_Area_mid(mm^2)  Cortical_Area_inner(mm^2)  Cortical_Area_pial(mm^2)
-85   650.0                 0.0       843.371839         204.48026       796.857961                  1640.2298                      0.0                        0.0                       0.0
+ROI_ID :650
+    Mean_Thickness(mm)  GM_Volume(mm^3)  CSF_Volume(mm^3)  WM_Volume(mm^3)  Total_Volume(GM+WM)(mm^3)  Cortical_Area_mid(mm^2)  Cortical_Area_inner(mm^2)  Cortical_Area_pial(mm^2)
+85                 0.0       843.371839         204.48026       796.857961                  1640.2298                      0.0                        0.0                       0.0
+LOW THRESHOLD
 0
 ROI_ID                        650.000000
 Mean_Thickness(mm)              0.000000
@@ -32,6 +37,7 @@ Total_Volume(GM+WM)(mm^3)    1640.229800
 Cortical_Area_mid(mm^2)         0.000000
 Cortical_Area_inner(mm^2)       0.000000
 Cortical_Area_pial(mm^2)        0.000000
+HIGH THRESHOLD
 0
 ROI_ID                        650.000000
 Mean_Thickness(mm)              0.000000
@@ -42,9 +48,11 @@ Total_Volume(GM+WM)(mm^3)    1640.229800
 Cortical_Area_mid(mm^2)         0.000000
 Cortical_Area_inner(mm^2)       0.000000
 Cortical_Area_pial(mm^2)        0.000000
-    ROI_ID  Mean_Thickness(mm)  GM_Volume(mm^3)  CSF_Volume(mm^3)  WM_Volume(mm^3)  Total_Volume(GM+WM)(mm^3)  Cortical_Area_mid(mm^2)  Cortical_Area_inner(mm^2)  Cortical_Area_pial(mm^2)
-86   651.0                 0.0       790.841882        276.656632       536.481538                 1327.32342                      0.0                        0.0                       0.0
-86   651.0                 0.0       790.841882        276.656632       536.481538                 1327.32342                      0.0                        0.0                       0.0
+ROI_ID :651
+    Mean_Thickness(mm)  GM_Volume(mm^3)  CSF_Volume(mm^3)  WM_Volume(mm^3)  Total_Volume(GM+WM)(mm^3)  Cortical_Area_mid(mm^2)  Cortical_Area_inner(mm^2)  Cortical_Area_pial(mm^2)
+86                 0.0       790.841882        276.656632       536.481538                 1327.32342                      0.0                        0.0                       0.0
+86                 0.0       790.841882        276.656632       536.481538                 1327.32342                      0.0                        0.0                       0.0
+LOW THRESHOLD
 0
 ROI_ID                        651.000000
 Mean_Thickness(mm)              0.000000
@@ -55,6 +63,7 @@ Total_Volume(GM+WM)(mm^3)    1327.323420
 Cortical_Area_mid(mm^2)         0.000000
 Cortical_Area_inner(mm^2)       0.000000
 Cortical_Area_pial(mm^2)        0.000000
+HIGH THRESHOLD
 0
 ROI_ID                        651.000000
 Mean_Thickness(mm)              0.000000
@@ -65,9 +74,11 @@ Total_Volume(GM+WM)(mm^3)    1327.323420
 Cortical_Area_mid(mm^2)         0.000000
 Cortical_Area_inner(mm^2)       0.000000
 Cortical_Area_pial(mm^2)        0.000000
-    ROI_ID  Mean_Thickness(mm)  GM_Volume(mm^3)  CSF_Volume(mm^3)  WM_Volume(mm^3)  Total_Volume(GM+WM)(mm^3)  Cortical_Area_mid(mm^2)  Cortical_Area_inner(mm^2)  Cortical_Area_pial(mm^2)
-87   660.0                 0.0        63.274166         64.029967       207.855878                 271.130044                      0.0                        0.0                       0.0
-87   660.0                 0.0        63.274166         64.029967       207.855878                 271.130044                      0.0                        0.0                       0.0
+ROI_ID :660
+    Mean_Thickness(mm)  GM_Volume(mm^3)  CSF_Volume(mm^3)  WM_Volume(mm^3)  Total_Volume(GM+WM)(mm^3)  Cortical_Area_mid(mm^2)  Cortical_Area_inner(mm^2)  Cortical_Area_pial(mm^2)
+87                 0.0        63.274166         64.029967       207.855878                 271.130044                      0.0                        0.0                       0.0
+87                 0.0        63.274166         64.029967       207.855878                 271.130044                      0.0                        0.0                       0.0
+LOW THRESHOLD
 0
 ROI_ID                       660.000000
 Mean_Thickness(mm)             0.000000
@@ -78,6 +89,7 @@ Total_Volume(GM+WM)(mm^3)    271.130044
 Cortical_Area_mid(mm^2)        0.000000
 Cortical_Area_inner(mm^2)      0.000000
 Cortical_Area_pial(mm^2)       0.000000
+HIGH THRESHOLD
 0
 ROI_ID                       660.000000
 Mean_Thickness(mm)             0.000000
@@ -88,8 +100,10 @@ Total_Volume(GM+WM)(mm^3)    271.130044
 Cortical_Area_mid(mm^2)        0.000000
 Cortical_Area_inner(mm^2)      0.000000
 Cortical_Area_pial(mm^2)       0.000000
-    ROI_ID  Mean_Thickness(mm)  GM_Volume(mm^3)  CSF_Volume(mm^3)  WM_Volume(mm^3)  Total_Volume(GM+WM)(mm^3)  Cortical_Area_mid(mm^2)  Cortical_Area_inner(mm^2)  Cortical_Area_pial(mm^2)
-88   661.0                 0.0        46.589644         38.342424       242.247943                 288.837586                      0.0                        0.0                       0.0
+ROI_ID :661
+    Mean_Thickness(mm)  GM_Volume(mm^3)  CSF_Volume(mm^3)  WM_Volume(mm^3)  Total_Volume(GM+WM)(mm^3)  Cortical_Area_mid(mm^2)  Cortical_Area_inner(mm^2)  Cortical_Area_pial(mm^2)
+88                 0.0        46.589644         38.342424       242.247943                 288.837586                      0.0                        0.0                       0.0
+LOW THRESHOLD
 0
 ROI_ID                       661.000000
 Mean_Thickness(mm)             0.000000
@@ -100,6 +114,7 @@ Total_Volume(GM+WM)(mm^3)    288.837586
 Cortical_Area_mid(mm^2)        0.000000
 Cortical_Area_inner(mm^2)      0.000000
 Cortical_Area_pial(mm^2)       0.000000
+HIGH THRESHOLD
 0
 ROI_ID                       661.000000
 Mean_Thickness(mm)             0.000000
@@ -110,9 +125,11 @@ Total_Volume(GM+WM)(mm^3)    288.837586
 Cortical_Area_mid(mm^2)        0.000000
 Cortical_Area_inner(mm^2)      0.000000
 Cortical_Area_pial(mm^2)       0.000000
-    ROI_ID  Mean_Thickness(mm)  GM_Volume(mm^3)  CSF_Volume(mm^3)  WM_Volume(mm^3)  Total_Volume(GM+WM)(mm^3)  Cortical_Area_mid(mm^2)  Cortical_Area_inner(mm^2)  Cortical_Area_pial(mm^2)
-89   662.0                 0.0        44.374497         45.834201        58.751307                 103.125803                      0.0                        0.0                       0.0
-89   662.0                 0.0        44.374497         45.834201        58.751307                 103.125803                      0.0                        0.0                       0.0
+ROI_ID :662
+    Mean_Thickness(mm)  GM_Volume(mm^3)  CSF_Volume(mm^3)  WM_Volume(mm^3)  Total_Volume(GM+WM)(mm^3)  Cortical_Area_mid(mm^2)  Cortical_Area_inner(mm^2)  Cortical_Area_pial(mm^2)
+89                 0.0        44.374497         45.834201        58.751307                 103.125803                      0.0                        0.0                       0.0
+89                 0.0        44.374497         45.834201        58.751307                 103.125803                      0.0                        0.0                       0.0
+LOW THRESHOLD
 0
 ROI_ID                       662.000000
 Mean_Thickness(mm)             0.000000
@@ -123,6 +140,7 @@ Total_Volume(GM+WM)(mm^3)    103.125803
 Cortical_Area_mid(mm^2)        0.000000
 Cortical_Area_inner(mm^2)      0.000000
 Cortical_Area_pial(mm^2)       0.000000
+HIGH THRESHOLD
 0
 ROI_ID                       662.000000
 Mean_Thickness(mm)             0.000000
@@ -133,9 +151,11 @@ Total_Volume(GM+WM)(mm^3)    103.125803
 Cortical_Area_mid(mm^2)        0.000000
 Cortical_Area_inner(mm^2)      0.000000
 Cortical_Area_pial(mm^2)       0.000000
-    ROI_ID  Mean_Thickness(mm)  GM_Volume(mm^3)  CSF_Volume(mm^3)  WM_Volume(mm^3)  Total_Volume(GM+WM)(mm^3)  Cortical_Area_mid(mm^2)  Cortical_Area_inner(mm^2)  Cortical_Area_pial(mm^2)
-90   663.0                 0.0        44.278929         41.795203        84.165873                 128.444802                      0.0                        0.0                       0.0
-90   663.0                 0.0        44.278929         41.795203        84.165873                 128.444802                      0.0                        0.0                       0.0
+ROI_ID :663
+    Mean_Thickness(mm)  GM_Volume(mm^3)  CSF_Volume(mm^3)  WM_Volume(mm^3)  Total_Volume(GM+WM)(mm^3)  Cortical_Area_mid(mm^2)  Cortical_Area_inner(mm^2)  Cortical_Area_pial(mm^2)
+90                 0.0        44.278929         41.795203        84.165873                 128.444802                      0.0                        0.0                       0.0
+90                 0.0        44.278929         41.795203        84.165873                 128.444802                      0.0                        0.0                       0.0
+LOW THRESHOLD
 0
 ROI_ID                       663.000000
 Mean_Thickness(mm)             0.000000
@@ -146,6 +166,7 @@ Total_Volume(GM+WM)(mm^3)    128.444802
 Cortical_Area_mid(mm^2)        0.000000
 Cortical_Area_inner(mm^2)      0.000000
 Cortical_Area_pial(mm^2)       0.000000
+HIGH THRESHOLD
 0
 ROI_ID                       663.000000
 Mean_Thickness(mm)             0.000000

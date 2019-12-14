@@ -44,7 +44,14 @@ def find_outliers():
     low, high = thresholds
 
     ids = data['ROI_ID'].unique()
-    outfile = "./outliers/" + "report.txt"
+    subject_id = data_file.split("\\")
+    subject_id = subject_id[-1]
+    subject_id = subject_id.split(".")
+    subject_id = subject_id[:-1]
+    subject_id = ''.join(subject_id)
+    outfile = "./outliers/" + subject_id + ".report.txt"
+    
+    num_outliers = 0
 
     with open(outfile, "w") as of:
         for id in ids:
@@ -73,19 +80,24 @@ def find_outliers():
             
             out_list = [Out1, Out2]
             out = pd.concat(out_list)
-            
-            outfile = "./outliers/" + str(id) + ".txt"
 
             if out.empty:
                 pass
             else:
-                print(id)
+                num_outliers += 1
+                of.write("ROI_ID :")
+                of.write(str(id))
+                of.write("\n")
+                out = out.drop("ROI_ID", axis=1)
                 of.write(out.to_string())
                 of.write("\n")
+                of.write("LOW THRESHOLD\n")
                 of.write(Q1.to_string())
                 of.write("\n")
+                of.write("HIGH THRESHOLD\n")
                 of.write(Q3.to_string())
                 of.write("\n")
+    print(f"Total outliers : {num_outliers}")
 
 
 if __name__ == '__main__':
