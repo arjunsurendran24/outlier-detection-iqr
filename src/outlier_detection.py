@@ -43,62 +43,105 @@ def find_outliers():
 
     low, high = thresholds
 
-    ids = data['ROI_ID'].unique()
-    subject_id = data_file.split("\\")
-    subject_id = subject_id[-1]
-    subject_id = subject_id.split(".")
-    subject_id = subject_id[:-1]
-    subject_id = ''.join(subject_id)
-    outfile = "./outliers/" + subject_id + ".report.txt"
+    ids = data['ROI_ID'].unique()    
     
-    num_outliers = 0
+    for id in ids:
 
-    with open(outfile, "w") as of:
-        for id in ids:
-            
-            df = data[data['ROI_ID'] == id]
-            df.drop('ROI_ID', axis=1)
-            
-            low_file_name = "./thresholds/" + str(id) + "_" + str(low) + "_lower_threshold.txt"
-            high_file_name = "./thresholds/" + str(id) + "_" + str(high) +  "_higher_threshold.txt"
-            
+        df = data[data['ROI_ID'] == id]
+        df = df.drop('ROI_ID', axis=1)
+
+        low_file_name = "./thresholds/" + str(id) + "_" + str(low) + "_lower_threshold.txt"
+        high_file_name = "./thresholds/" + str(id) + "_" + str(high) +  "_higher_threshold.txt"
+
+        try:
+            Q1 = read_threshold_from_file(low_file_name)
+            Q3 = read_threshold_from_file(high_file_name)
+            IQR = Q3 - Q1
+
+        except FileNotFoundError:
+            Q1 = df.quantile(low)
+            Q3 = df.quantile(high)
+            Q1.to_csv(low_file_name, sep="\t")
+            Q3.to_csv(high_file_name, sep="\t")
+            IQR = Q3 - Q1
+
+        for data_file in data_files:
             try:
-                Q1 = read_threshold_from_file(low_file_name)
-                Q3 = read_threshold_from_file(high_file_name)
-
-            except FileNotFoundError:
-                Q1 = df.quantile(low)
-                Q3 = df.quantile(high)
-                Q1.to_csv(low_file_name, sep="\t")
-                Q3.to_csv(high_file_name, sep="\t")
-
-            Out1 = data[df >= Q3]
-            Out2 = data[df <= Q1]
-
-            Out1 = Out1.dropna('rows', how='any')
-            Out2 = Out2.dropna('rows', how='any')
+                df = pd.read_csv(data_file, sep="\t")
+                df_list.append(df)
+            except pd.errors.EmptyDataError:
+                print(f"No data found in {data_file}. Skipped")
+            except UnicodeDecodeError:
+                print(f"Invalid data in {data_file}. Skipped")
+            except Exception as err:
+                raise err
+                
+            subject_id = data_file.split("\\")
+            subject_id = subject_id[-1]
+            subject_id = subject_id.split(".")
+            subject_id = subject_id[:-1]
+            subject_id = ''.join(subject_id)
+            out_file = "./outliers/" + subject_id + ".report.txt"
             
+            df2 = data[data['ROI_ID'] == id]
+            df2 = df2.drop('ROI_ID', axis=1)
+
+            Out1 = df2[df2 > Q3 + 1.5 * IQR]
+            Out2 = df2[df2 < Q1 - 1.5 * IQR]
+            Out1 = Out1.dropna('rows', how='all')
+            Out2 = Out2.dropna('rows', how='all')
+            Out1 = Out1.dropna('columns', how='all')
+            Out2 = Out1.dropna('columns', how='all')
+
             out_list = [Out1, Out2]
             out = pd.concat(out_list)
-
+            
+            out = out.drop_duplicates()
             if out.empty:
                 pass
             else:
-                num_outliers += 1
-                of.write("ROI_ID :")
-                of.write(str(id))
-                of.write("\n")
-                out = out.drop("ROI_ID", axis=1)
-                of.write(out.to_string())
-                of.write("\n")
-                of.write("LOW THRESHOLD\n")
-                of.write(Q1.to_string())
-                of.write("\n")
-                of.write("HIGH THRESHOLD\n")
-                of.write(Q3.to_string())
-                of.write("\n")
-    print(f"Total outliers : {num_outliers}")
-
+                if os.path.exists(out_file):
+                    val = "a"
+                    
+                    with open(out_file, val) as outfile:
+                        columns = out.columns
+                        for col in columns:
+                            outfile.write(str(id))
+                            outfile.write("\t")
+                            outfile.write(col)
+                            outfile.write("\t")
+                            outfile.write(str(np.round(out[col].values[0])))
+                            outfile.write("\t")
+                            outfile.write(str(np.round(Q1[col])))
+                            outfile.write("\t")
+                            outfile.write(str(np.round(Q3[col])))
+                            outfile.write("\n")
+                        
+                else:
+                    val = "w"
+                    with open(out_file, val) as outfile:
+                        outfile.write("ROI_ID")
+                        outfile.write("\t")
+                        outfile.write("Measure")
+                        outfile.write("\t")
+                        outfile.write("Value")
+                        outfile.write("\t")
+                        outfile.write("Lower Bound")
+                        outfile.write("\t")
+                        outfile.write("Higher Bound")
+                        outfile.write("\n")
+                        columns = out.columns
+                        for col in columns:
+                            outfile.write(str(id))
+                            outfile.write("\t")
+                            outfile.write(col)
+                            outfile.write("\t")
+                            outfile.write(str(np.round(out[col].values[0])))
+                            outfile.write("\t")
+                            outfile.write(str(np.round(Q1[col])))
+                            outfile.write("\t")
+                            outfile.write(str(np.round(Q3[col])))
+                            outfile.write("\n")
 
 if __name__ == '__main__':
     find_outliers()
