@@ -60,9 +60,13 @@ If the thresholds are already calculated and stored in file it will be read from
 
 # Output
 
-For each ROI_ID there will be a text file which contains
-1. No Outliers! - If there are no outliers  
-2. The outlier datapoints for that ROI_ID which is outside the thresholds
+The output will be a text file with *.report.txt
+
+It contains
+1. Outlier ID
+2. Outlier Data corresponding to those ID
+3. Low threshold for ID
+4. High threshold for ID
 
 # References
 
