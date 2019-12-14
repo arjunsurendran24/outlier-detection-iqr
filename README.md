@@ -72,5 +72,5 @@ It contains
 
 1. http://brainsuite.org/, BrainSuite, Last accessed 12/08/2019
 2. https://github.com/ajoshiusc/brain-reporter, Brain Reporter, Last accessed 12/08/2019
-3. https://en.wikipedia.org/wiki/Interquartile_range, Interquartie Range - Wikipedia, Last accessed 12/08/2019
+3. https://en.wikipedia.org/wiki/Interquartile_range, Interquartile Range - Wikipedia, Last accessed 12/08/2019
 
